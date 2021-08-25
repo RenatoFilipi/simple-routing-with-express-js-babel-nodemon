@@ -1,13 +1,13 @@
 import express from "express";
 const demoRoutes = express.Router();
+import { demoController } from "../Controllers/DependencyResolver";
 
-demoRoutes.get("/demo1", (request, response) => {
-  return response.json({ msg: "get route working!" });
+demoRoutes.get("/get", (request, response) => {
+  return demoController.get(request, response);
 });
 
-demoRoutes.post("/demo2", (request, response) => {
-  console.log(request.body);
-  return response.json({ msg: "post route working!" });
+demoRoutes.post("/post", (request, response) => {
+  return demoController.post(request, response);
 });
 
 export { demoRoutes };
