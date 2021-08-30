@@ -1,4 +1,4 @@
-import { DemoController } from "./DemoController";
+import { DemoController } from "../controllers/DemoController";
 
 const demoController = new DemoController();
 
